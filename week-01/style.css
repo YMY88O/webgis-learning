@@ -3,11 +3,18 @@
 *::after {
   box-sizing: border-box;
 }
-
 :root {
   --primary-color: #0f4c81;
 }
-
+header {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+}
+header p:first-of-type {
+  margin-left: auto;
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -24,6 +31,7 @@ h1 {
   width: 300px;
   padding: 20px;
   border: 5px solid #333;
+  border-bottom: 3px dashed #0f4c81;
 }
 p {
   text-align: center;
@@ -42,9 +50,15 @@ h2 {
 .skill-icon {
   margin-right: 6px;
 }
-h1 {
-  border-bottom: 3px dashed #0f4c81;
-}
 ul {
   padding-left: 20px;
+}
+.skill-card {
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+}
+.skill-card > div {
+  flex: 1;
+  background-color: #ee0303;
 }
