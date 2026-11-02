@@ -54,11 +54,15 @@ ul {
   padding-left: 20px;
 }
 .skill-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  align-items: stretch;
 }
 .skill-card > div {
-  flex: 1;
   background-color: #ee0303;
+}
+@media (max-width: 768px) {
+  .skill-card {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
