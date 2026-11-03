@@ -53,15 +53,16 @@ h2 {
 ul {
   padding-left: 20px;
 }
-.skill-card > div {
+.skill-card {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  text-align: center;
 }
 .skill-card > div {
   /* 技能卡片内部元素样式 */
   background-color: #2fd39f;
+  text-align: center;
+  gap: 20px;
 }
 @media (max-width: 768px) {
   .skill-card {
