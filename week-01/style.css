@@ -62,7 +62,6 @@ ul {
   /* 技能卡片内部元素样式 */
   background-color: #2fd39f;
   text-align: center;
-  gap: 20px;
 }
 @media (max-width: 768px) {
   .skill-card {
@@ -72,12 +71,16 @@ ul {
 .page-header {
   background-color: var(--primary-color);
   color: rgb(181, 27, 27);
-  padding: 20px;
+  padding: 1.25rem;
+}
+.page-header h1 {
+  animation: breath 3s infinite;
 }
 .page-main {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  min-height: 20vh;
 }
 .contact-form {
   background-color: #f9f9f9;
@@ -88,8 +91,32 @@ ul {
 footer a {
   color: var(--primary-color);
   text-decoration: none;
+  transition: color 0.3s;
 }
 footer a:hover {
   color: #ee0303;
   text-decoration: underline;
+  text-decoration: none;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 40px;
+  background-color: #07ebdf;
+  color: #e0eb09;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+@keyframes breath {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
 }
