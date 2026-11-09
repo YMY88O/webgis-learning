@@ -84,7 +84,7 @@
       console.log(result);
       let day = 6;
       switch (day) {
-        case 1: 
+        case 1:
           console.log("周一");
           break;
         case 2:
@@ -120,6 +120,20 @@
         console.log(n);
         n++;
       }
+      const square = function (x) {
+        return x * x;
+      };
+      console.log(square(9));
+      const addarrow = function (x, y) {
+        return x + y;
+      };
+      console.log(addarrow(3, 4));
+      const timesarrow = (x, y) => x * y;
+      console.log(timesarrow(3, 4));
+      function makelabel(text = "未命名", num = 1) {
+        return text + "-" + num;
+      }
+      console.log(makelabel("图们", 2));
     </script>
   </body>
 </html>
