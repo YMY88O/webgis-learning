@@ -53,10 +53,10 @@
       const birthYear = 2002;
       let age = 2026 - birthYear;
       console.log("我叫" + name + "，今年" + age + "岁");
-      let scroce = 95;
-      if (scroce >= 90) {
+      let scorce = 95;
+      if (scorce >= 90) {
         console.log("优秀");
-      } else if (scroce >= 60) {
+      } else if (scorce >= 60) {
         console.log("及格");
       } else {
         console.log("不及格");
@@ -79,6 +79,47 @@
         return true;
       }
       console.log(isPrime(7), isPrime(9));
+      let scorce2 = 59;
+      let result = scorce2 >= 60 ? "及格" : "不及格";
+      console.log(result);
+      let day = 6;
+      switch (day) {
+        case 1: 
+          console.log("周一");
+          break;
+        case 2:
+          console.log("周二");
+          break;
+        case 3:
+          console.log("周三");
+          break;
+        case 4:
+          console.log("周四");
+          break;
+        case 5:
+          console.log("周五");
+          break;
+        case 6:
+          console.log("周六");
+          break;
+        case 7:
+          console.log("周日");
+          break;
+        default:
+          console.log("输入错误");
+          break;
+      }
+      let n = 1;
+      while (n <= 10) {
+        if (n === 3) {
+          n++;
+          continue;
+        } else if (n > 7) {
+          break;
+        }
+        console.log(n);
+        n++;
+      }
     </script>
   </body>
 </html>
