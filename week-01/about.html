@@ -134,6 +134,35 @@
         return text + "-" + num;
       }
       console.log(makelabel("图们", 2));
+      function sumAll() {
+        let total = 0;
+        for (i = 0; i <= arguments.length - 1; i++) {
+          total = total + arguments[i];
+        }
+        return total;
+      }
+      console.log(sumAll(2, 5, 8));
+      for (var i = 1; i <= 3; i++) {
+        setTimeout(function () {
+          console.log("[2] var:", i);
+        }, 0);
+      }
+      for (let i = 1; i <= 3; i++) {
+        setTimeout(function () {
+          console.log("[3] let:", i);
+        }, 0);
+      }
+      {
+        let x = 1;
+        console.log("[3]隔间里：", x);
+      }
+      {
+        let y = 2;
+      }
+      console.log("[3]隔间外：",y);
+      console.log("[4]赋值前；", v);
+      var v = 7;
+      console.log("[4]赋值后：", v);
     </script>
   </body>
 </html>
