@@ -53,10 +53,10 @@
       const birthYear = 2002;
       let age = 2026 - birthYear;
       console.log("我叫" + name + "，今年" + age + "岁");
-      let scorce = 95;
-      if (scorce >= 90) {
+      let score1 = 95;
+      if (score1 >= 90) {
         console.log("优秀");
-      } else if (scorce >= 60) {
+      } else if (score1 >= 60) {
         console.log("及格");
       } else {
         console.log("不及格");
@@ -79,8 +79,8 @@
         return true;
       }
       console.log(isPrime(7), isPrime(9));
-      let scorce2 = 59;
-      let result = scorce2 >= 60 ? "及格" : "不及格";
+      let score2 = 59;
+      let result = score2 >= 60 ? "及格" : "不及格";
       console.log(result);
       let day = 6;
       switch (day) {
@@ -159,10 +159,69 @@
       {
         let y = 2;
       }
-      console.log("[3]隔间外：",y);
+      // console.log("[3]隔间外：", y);
       console.log("[4]赋值前；", v);
       var v = 7;
       console.log("[4]赋值后：", v);
+      let scroce2 = 59;
+      let verdict = scroce2 >= 60 ? "及格" : "不及格";
+      console.log("[1] 三元：", verdict);
+      let day2 = 3;
+      switch (day2) {
+        case 3:
+          console.log("[1] switch: 周三有晚间主学");
+          break;
+        default:
+          console.log("[1]无对应");
+      }
+      let n1 = 1;
+      while (n1 <= 10) {
+        if (n1 === 5) {
+          n1++;
+          continue;
+        }
+        console.log("[2] while:", n1);
+        n1++;
+      }
+      let total2 = 0;
+      for (let i = 1; i <= 20; i++) {
+        total2 = total2 + i;
+        if (total2 >= 20) {
+          console.log("[2] for:", total2);
+          console.log("[2] for:", i);
+          break;
+        }
+      }
+      function makelabel2(a, b) {
+        return a + b;
+      }
+      console.log("[3] makelabel2==", makelabel2(1, 2));
+      const addarrow2 = function (x, y) {
+        return x + y;
+      };
+      console.log("[3] addarrow2==", addarrow2(2, 2));
+      const addarrow3 = (a, b) => a + b;
+      console.log("[3] addarrow3==", addarrow3(3, 3));
+      function makelabel3(text = "未命名", num = 1) {
+        return text + "-" + num;
+      }
+      console.log("[3] makelabel3==", makelabel3("成都", 3));
+      function sumAll2() {
+        let total = 0;
+        for (i = 0; i <= arguments.length - 1; i++) {
+          total = total + arguments[i];
+        }
+        return total;
+      }
+      console.log("[4] arguments:", sumAll(2, 5, 8));
+      let outer = 1;
+      {
+        let inner = 2;
+        console.log("[4] 花括号里:", outer, inner);
+        console.log("[4] 提升前:", v);
+        var v = 7;
+        console.log("[4] 提升后:", v);
+      }
     </script>
   </body>
 </html>
