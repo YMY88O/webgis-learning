@@ -1,2 +1,3 @@
 # 编辑器与系统文件，不进仓库
 .vscode/
+node_modules/
