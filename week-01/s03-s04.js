@@ -72,7 +72,7 @@ function makeLabel3(text = "未命名", num = 1) {
 console.log("[3] makeLabel3==", makeLabel3("成都", 3));
 function sumAll2() {
   let total = 0;
-  for (i = 0; i <= arguments.length - 1; i++) {
+  for ( let i = 0; i <= arguments.length - 1; i++) {
     total = total + arguments[i];
   }
   return total;
