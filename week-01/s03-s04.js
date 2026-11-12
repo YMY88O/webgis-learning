@@ -1,6 +1,6 @@
 function sumAll() {
   let total = 0;
-  for (i = 0; i <= arguments.length - 1; i++) {
+  for (let i = 0; i <= arguments.length - 1; i++) {
     total = total + arguments[i];
   }
   return total;
