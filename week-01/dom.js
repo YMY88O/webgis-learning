@@ -7,4 +7,5 @@ btn.addEventListener('click', () => {
   box.appendChild(card);
   cardCount++;
   console.log('卡片数：', cardCount);
-});
+});                       
+
