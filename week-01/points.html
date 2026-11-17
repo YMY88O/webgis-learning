@@ -8,15 +8,30 @@
 <body>
     <p id="num"></p >
     <script> 
+    const num1=document.getElementById("num").textContent="加载中...";
+    console.log("[0]", num1);
     fetch("data/points.json")
     .then(function(response) {
         return response.json();
     })
     .then(function(data) {
         const count=data.points.length;
-    
-    document.getElementById("num").textContent="点位数："+count;
-    console.log("[5]", count);})
+        if(count===0){
+            document.getElementById("num").textContent="暂无点位";
+            console.log("[6]", count);
+
+        }
+        else if(count>0){
+            document.getElementById("num").textContent="点位数："+count;
+            console.log("[5]", count);
+        }
+        })
+        .catch(
+            function(error){
+                document.getElementById("num").textContent="加载失败";
+                console.log("[7]", error);
+            }
+        );
 </script>
 </body>
 </html>
