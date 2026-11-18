@@ -6,6 +6,7 @@
 
 - 主页 · 第 1 个在线链接：https://ymy88o.github.io/webgis-learning/week-01/about.html
 - 仓库首页：https://ymy88o.github.io/webgis-learning/
+- 真实地震点位数 · 第 2 个在线链接（2026-11-18 新增）：Https://ymy88o.github.io/webgis-learning/week-01/quakes.html
 
 上面两条都能打开（HTTP 200，服务器回的数字，意思是「有，给你」）。仓库根目录没有 `index.html`（网页默认首页文件），所以根网址显示的是本文件由 GitHub Pages 渲染出来的页面；要看到主页，网址必须写到 `week-01/about.html`。
 
@@ -54,6 +55,22 @@ GitHub Pages：把仓库里的网页文件变成别人能点开的网址的免�
 - 每 2 周至少新增 1 个能打开的在线链接；写在本机、没上线的代码不算作品。
 - 在线链接打不开时，当天只修这一件事，不往下学新内容。
 
+## 数据卡·USGS 地震点位（W2）
+
+来源网址：https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson" -o data/raw/usgs-all-day-2026-11-18.geojson
+坐标系：WGS84 单位是度、每条位置三个数按经度纬度深度排。
+条数：193
+字段：{
+    "feature":[
+        "properties":{"mag""2.1,"place":"Alaska"},
+        "geometry":{
+            "type":"Point","coordinates":[-151.988,59.791,68.3]",
+            "id":"us7000abcd"
+        }
+    ]
+"
+}
+署名要求：来源 USGS（美国地质调查局 / U.S. Geological Survey）.获取时间：2026-11-18
 ## 历史记录（以下为当时原文，不改动）
 
 ### Day 1 完成记录（2026-10-18）
