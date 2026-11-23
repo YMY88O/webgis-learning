@@ -16,8 +16,11 @@
 <body>
     <div id="map"></div>
     <script>
-        const map = L.map("map").setView([42.8,129.8],13)
+        const map = L.map("map").setView([42.8,129.8],13);
         console.log("[1]",map.getZoom())
+        var baseUrl ="https://t0.tianditu.gov.cn/vec_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=vec&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=a62494c005d8b30b87dfef2209f005d1";
+        const baseLayer=L.tileLayer(baseUrl,{attribution: "底图：天地图（国家地理信息公共服务平台）"});
+        baseLayer.addTo(map);
         const marker=L.marker([42.8,129.8]).addTo(map)
         const popupText="图们市（练习点位）"
         marker.bindPopup(popupText);
