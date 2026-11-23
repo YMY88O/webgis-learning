@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>标记与弹窗</title>
+    <!-- 这一行取 Leaflet 1.7.1 的样式文件，图钉长什么样归它管 -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- 这一行取 Leaflet 1.7.1 的代码文件，页面里才有 L 这个简称 -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <style>
+      /* #map 是给方框起的名字；height: 400px 给地图一块能看见的地方 */
+      #map { width: 100%; height: 400px; }
+    </style>
+</head>
+<body>
+    <!-- map 是给这个空方框起的名字 -->
+    <div id="map"></div>
+    <script>
+      // L 是 Leaflet 的简称；"map" 去 HTML 找 id="map" 那个方框
+      // [42.8, 129.8] 是纬度 42.8、经度 129.8，练习近似数，不是实测点位
+      // 13 是初始层级，数字越大看得越近
+      const map = L.map("map").setView([42.8, 129.8], 13);
+      // "[1]" 是编号字；map.getZoom() 取出当前层级，是 13。只在 Console 里看到
+      console.log("[1]", map.getZoom());
+
+      // L.marker 造一个图钉；方括号里还是那组练习经纬度
+      // marker 是我给这个图钉起的名字
+      const marker = L.marker([42.8, 129.8]);
+      // addTo(map) 把这个图钉加到刚才那张地图上；不写这行，网页上就没有图钉
+      marker.addTo(map);
+
+      // popupText 是我给这串字起的名字；引号里的是一串字，不是取第几格
+      const popupText = "图们市（练习点位）";
+      // bindPopup 给图钉绑一个弹窗，点图钉才冒出来
+      marker.bindPopup(popupText);
+      // "[2]" 是编号字；popupText 是刚才那串字。只在 Console 里看到
+      console.log("[2]", popupText);
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><title>addTo 对照</title></head>
+<body>
+    <!-- box 是给这个空段落起的名字 -->
+    <p id="box"></p>
+    <script>
+      // text 是我给这串字起的名字；这一步只是把字存进名字，网页上还没写进去
+      const text = "还没写进网页";
+      // "[3]" 是编号字；text 是那串字。只在 Console 里看到
+      console.log("[3]", text);
+      // 下面这行如果敲上，网页上才会出现字；今天故意不敲
+      // document.getElementById("box").textContent = text;
+    </script>
+</body>
+</html>

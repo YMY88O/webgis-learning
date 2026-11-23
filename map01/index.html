@@ -16,10 +16,12 @@
 <body>
     <div id="map"></div>
     <script>
-        const map = L.map("map").setView([42.8,9129.8],13)
+        const map = L.map("map").setView([42.8,129.8],13)
         console.log("[1]",map.getZoom())
+        const marker=L.marker([42.8,129.8]).addTo(map)
+        const popupText="图们市（练习点位）"
+        marker.bindPopup(popupText);
+        console.log("[2]",popupText);
         </script>
-</body>
-</html>
 </body>
 </html>
